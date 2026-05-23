@@ -48,10 +48,13 @@ graph LR
     Spy --> Engine
     Engine --> Ctrl
     Ctrl --> Mig
-    Ctrl --> Regive-power-observability
+    Ctrl --> Reg
+
 AI-Native Telemetry Framework for Workload-Aware Power Optimization in Hyperscale AI Infrastructures.
 
 
+```markdown
+```mermaid
 graph TD
     %% Style Configurations
     classDef startStyle fill:#eceff1,stroke:#37474f,stroke-width:2px;
@@ -81,5 +84,3 @@ graph TD
     Check_Latency -- Yes --> Act_Migrate
     
     Act_Migrate --> Act_Sleep
-
-
