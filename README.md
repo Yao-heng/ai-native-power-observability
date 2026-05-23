@@ -39,7 +39,7 @@ graph LR
     
     Ctrl[core_engine/power_controller.py<br>Actuation Dispatcher]:::actStyle
     Mig[vGPU Live Migration Pool]:::actStyle
-    Reg[Firmware Register Throttling<br>D3Cold / Power-Gating]:::actStyle
+    Reg[Firmware Register Throttling<br>D3Cold<br>Power-Gating]:::actStyle
 
     %% Data Flow
     SW --> Spy
