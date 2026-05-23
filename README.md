@@ -49,34 +49,3 @@ graph LR
     Engine --> Ctrl
     Ctrl --> Mig
     Ctrl --> Reg
-
-
-    graph TD
-    %% Style Configurations
-    classDef startStyle fill:#eceff1,stroke:#37474f,stroke-width:2px;
-    classDef condStyle fill:#fffde7,stroke:#f57f17,stroke-width:2px;
-    classDef activeStyle fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
-    classDef alertStyle fill:#ffebee,stroke:#b71c1c,stroke-width:2px;
-
-    %% Nodes
-    Start([Ingest Live Telemetry Snapshot]):::startStyle
-    Check_Util{Reported GPU Util > 70%?}:::condStyle
-    Check_Silicon{Tensor Core Activity < 15%<br>AND<br>HBM Bandwidth < 100 GB/s?}:::condStyle
-    Check_Latency{User Interaction Frequency<br>Identified as Low-Frequency?}:::condStyle
-    
-    Act_P0[Maintain P0 High-Voltage Rail<br>Valid Mathematical Workload]:::activeStyle
-    Act_Migrate[Trigger Context Live Migration<br>To Low-Power Shared Pool]:::alertStyle
-    Act_Sleep[Force Microsecond Hardware Throttling<br>Write Register to D3Cold / Power-Gate]:::alertStyle
-
-    %% Connections
-    Start --> Check_Util
-    Check_Util -- No --> Check_Latency
-    Check_Util -- Yes --> Check_Silicon
-    
-    Check_Silicon -- No --> Act_P0
-    Check_Silicon -- Yes --> Act_Migrate
-    
-    Check_Latency -- No --> Act_P0
-    Check_Latency -- Yes --> Act_Migrate
-    
-    Act_Migrate --> Act_Sleep
