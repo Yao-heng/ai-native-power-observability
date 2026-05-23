@@ -1,4 +1,4 @@
-# ai-nat# AI-Native Power Lifecycle Observability (AIOps-Power)
+# AI-Native Power Lifecycle Observability (AIOps-Power)
 
 > **Next-Generation Telemetry & Actuation Framework for Workload-Aware Power Optimization in Hyperscale AI Infrastructures.**
 
@@ -49,14 +49,9 @@ graph LR
     Engine --> Ctrl
     Ctrl --> Mig
     Ctrl --> Reg
-```
-
-AI-Native Telemetry Framework for Workload-Aware Power Optimization in Hyperscale AI Infrastructures.
 
 
-```markdown
-```mermaid
-graph TD
+    graph TD
     %% Style Configurations
     classDef startStyle fill:#eceff1,stroke:#37474f,stroke-width:2px;
     classDef condStyle fill:#fffde7,stroke:#f57f17,stroke-width:2px;
@@ -85,5 +80,3 @@ graph TD
     Check_Latency -- Yes --> Act_Migrate
     
     Act_Migrate --> Act_Sleep
-    
-    ```
