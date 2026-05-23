@@ -49,6 +49,7 @@ graph LR
     Engine --> Ctrl
     Ctrl --> Mig
     Ctrl --> Reg
+```
 
 AI-Native Telemetry Framework for Workload-Aware Power Optimization in Hyperscale AI Infrastructures.
 
@@ -84,3 +85,5 @@ graph TD
     Check_Latency -- Yes --> Act_Migrate
     
     Act_Migrate --> Act_Sleep
+    
+    ```
