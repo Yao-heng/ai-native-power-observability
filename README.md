@@ -1,3 +1,4 @@
+![AIOps-Power Core Engine CI](https://github.com/Yao-Heng/ai-native-power-observability/actions/workflows/python-app-ci.yml/badge.svg)
 # AI-Native Power Lifecycle Observability (AIOps-Power)
 
 > **Next-Generation Telemetry & Actuation Framework for Workload-Aware Power Optimization in Hyperscale AI Infrastructures.**
