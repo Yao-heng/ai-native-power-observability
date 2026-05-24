@@ -1,0 +1,30 @@
+name: AIOps-Power Core Engine CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.10 Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Run Core Telemetry Spy Verification
+      run: |
+        echo "=== STARTING MICROARCHITECTURAL TELEMETRY VERIFICATION ==="
+        python core_engine/telemetry_spy.py
+
+    - name: Run Closed-Loop Power Controller Verification
+      run: |
+        echo "=== STARTING CLOSED-LOOP ACTUATION DISPATCH VERIFICATION ==="
+        python core_engine/power_controller.py
